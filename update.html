@@ -1,0 +1,76 @@
+<style>
+
+    body{
+      background-color: #f4e6e6;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    
+    form{
+      border-radius: 10px;
+      background: rgba(252, 252, 252, 0.6);
+      width: 8cm;
+      padding-left: 40px;
+      margin:auto;
+      position: relative;
+      top:200px
+    }
+    
+    label{
+        width:100;
+        
+        display : inline-block;}
+    
+    
+    input[type=text] {
+        background-color: #ffffff;
+        width: 150;
+        display: inline-block;
+        border-radius: 2px;
+        
+        }
+    
+        input[type=password] {
+        background-color: #fffefe;
+        width: 150;
+        display: inline-block;
+        border-radius: 2px;
+        
+        }
+    
+        input[type=number] {
+        background-color: #fffefe;
+        width: 150;
+        display: inline-block;
+        border-radius: 2px;
+        
+        }
+    
+        .button {
+          display: inline-block;
+          border-radius: 10px;
+          background-color: #676565;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 15px;
+          padding: 24px;
+          width: 250px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+    </style>
+    
+    <html>
+        <body>
+            <form method="POST" enctype="multipart/form-data">
+                <label></label><br><br>
+                {% csrf_token %}
+                {{form.as_p}}
+                <center><button type="submit" class="button">update</button></center>
+                <a href="http://127.0.0.1:8000/view/">back</a>
+            </form>
+        </body>
+    </html>
